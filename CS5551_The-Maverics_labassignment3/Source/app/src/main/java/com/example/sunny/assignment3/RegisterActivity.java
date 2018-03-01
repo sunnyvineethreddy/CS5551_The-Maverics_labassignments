@@ -93,7 +93,6 @@ progressDialog = new ProgressDialog(this);
                        Toast.makeText(RegisterActivity.this,
                                "Reg unsuccessful: " + task.getException().getMessage(), //ADD THIS
                                Toast.LENGTH_SHORT).show();
-
                        messagerr.setText(task.getException().getMessage());
                        messagerr.setVisibility(View.VISIBLE);
                    }
