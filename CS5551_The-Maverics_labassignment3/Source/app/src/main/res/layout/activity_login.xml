@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/androidbg"
+    tools:context="com.example.sunny.assignment3.LoginActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_alignEnd="@+id/login_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/login_button"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="29dp"
+        android:text="LOGIN HERE!"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/login_button"
+        android:layout_alignStart="@+id/login_button"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="UserName"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/txt_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_uname"
+        android:layout_alignStart="@+id/txt_uname"
+        android:layout_below="@+id/txt_uname"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Password" />
+
+    <Button
+        android:id="@+id/btn_lgn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_register"
+        android:layout_alignBottom="@+id/btn_register"
+        android:layout_alignLeft="@+id/txt_pwd"
+        android:layout_alignStart="@+id/txt_pwd"
+        android:text="LOGIN" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txt_pwd"
+        android:layout_alignRight="@+id/txt_pwd"
+        android:layout_below="@+id/txt_pwd"
+        android:text="Register Here" />
+
+    <TextView
+        android:id="@+id/txtmessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:textColor="@android:color/holo_red_light"
+        android:visibility="invisible" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn_lgn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="86dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="26dp" />
+
+
+</RelativeLayout>
