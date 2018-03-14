@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <ion-card>
+    <ion-card-content>
+      <button ion-button (click)="takePicture()">Take a Picture</button>
+      <div *ngIf="base64Image">
+        Image:
+        <img [src]="base64Image" />
+        <button ion-button (click)="getFaceAnalysis(base64Image)" class="submit-btn">Get Face Analysis</button>
+      </div>
+
+      <div *ngIf="imagesArray">
+        Face Detection Details:
+        <ion-list *ngFor="let image of imagesArray">
+          <div *ngFor="let face of image.faces">
+            Age : {{face.attributes.age}}
+            <div *ngIf=" face.attributes.gender.type == 'M'" >Gender : Male</div>
+            <div *ngIf=" face.attributes.gender.type == 'F'" >Gender : Female</div>
+            <a id="text2speech" class="speech" type="button"
+               href="http://translate.google.com/translate_tts?tl=en&q=Uploaded Image persons age is {{face.attributes.age}}&client=tw-ob">🔊 Text to Speech</a>
+          </div>
+        </ion-list>
+      </div>
+
+      <div *ngIf="errorArray">
+        Error :
+        <ion-list *ngFor="let error of errorArray">
+          {{error.Message}}
+        </ion-list>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
