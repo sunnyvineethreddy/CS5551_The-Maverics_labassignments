@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Nearest Medical Stores
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>NEAREST PHARMACY STORES</h2>
+  <ion-list *ngFor="let venue of data">
+      <ion-card>
+          <ion-card-content>
+            <ion-card-title>
+                {{venue.name}}
+            </ion-card-title>
+              <p>  <ion-icon ios="ios-call" md="md-call"></ion-icon>
+                {{venue.contact.formattedPhone}}<br>
+                <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+                {{venue.location.address}}
+              </p>
+          </ion-card-content>
+      </ion-card>
+  </ion-list>
+  <h2>Locate the nearest pharmacy stores from the current location</h2>
+  <div #map id="map">
+  </div>
+
+</ion-content>

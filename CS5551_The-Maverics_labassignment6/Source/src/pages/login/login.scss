@@ -1,0 +1,26 @@
+page-login {
+  ion-content {
+    background-image: url('../../assets/imgs/login.png');
+    background-repeat:no-repeat;
+    background-size:     cover;
+  }
+  .bg{
+    margin-top: 300px;
+  }
+  ion-item{
+    margin-bottom: 15px !important;
+    border-radius: 15px !important;
+  }
+  button{
+    margin-bottom: 15px !important;
+  }
+  .ll{
+    margin-left: 50%;
+  }
+  ion-icon{
+    margin-right: 10px;
+  }
+  button{
+    background-color: #d66b73 !important;
+  }
+}
